@@ -1,0 +1,47 @@
+﻿@page "/PostView/{id:int}"
+@using Domain.Models
+@using BlazorWasm.Services
+@inject IPostService postService
+@inject IUserService userService
+<h3>PostView</h3>
+
+@if (post == null)
+{
+    <span>Loading..</span>
+}
+else
+{
+    <div class="display-post-card">
+        <label><b>Title :</b> @post.Title</label>
+        <p><b>User: </b> @user.UserName</p>
+        <label><b>Description:</b></label>
+        <p>@post.Description</p>
+    </div>
+}
+
+@code {
+
+    [Parameter]
+    public int Id { get; set; }
+
+    private string msg = "";
+    private Post post;
+    private User user;
+
+    protected override async Task OnInitializedAsync()
+    {
+        msg = "";
+        try
+        {
+            post = await postService.GetByIdAsync(Id);
+            user = await userService.GetUserById(post.UserId);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            msg = e.Message;
+        }
+    }
+
+}
+}

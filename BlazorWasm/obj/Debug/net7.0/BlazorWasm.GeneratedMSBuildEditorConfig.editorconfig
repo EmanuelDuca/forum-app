@@ -1,0 +1,61 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = BlazorWasm
+build_property.RootNamespace = BlazorWasm
+build_property.ProjectDir = D:\Invatamant\VIA University College\Semestrul 3\DNP1\DNPAssignment-Git\DNPAssignment\BlazorWasm\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Invatamant\VIA University College\Semestrul 3\DNP1\DNPAssignment-Git\DNPAssignment\BlazorWasm
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Invatamant/VIA University College/Semestrul 3/DNP1/DNPAssignment-Git/DNPAssignment/BlazorWasm/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Invatamant/VIA University College/Semestrul 3/DNP1/DNPAssignment-Git/DNPAssignment/BlazorWasm/Pages/ViewPosts.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld1Bvc3RzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Invatamant/VIA University College/Semestrul 3/DNP1/DNPAssignment-Git/DNPAssignment/BlazorWasm/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Invatamant/VIA University College/Semestrul 3/DNP1/DNPAssignment-Git/DNPAssignment/BlazorWasm/Pages/CreatePost.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlUG9zdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-uzy05ijp57
+
+[D:/Invatamant/VIA University College/Semestrul 3/DNP1/DNPAssignment-Git/DNPAssignment/BlazorWasm/Pages/CreateUser.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlVXNlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-8ioxdxedwk
+
+[D:/Invatamant/VIA University College/Semestrul 3/DNP1/DNPAssignment-Git/DNPAssignment/BlazorWasm/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-xzgi4u3qtl
+
+[D:/Invatamant/VIA University College/Semestrul 3/DNP1/DNPAssignment-Git/DNPAssignment/BlazorWasm/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ggyo7swwbw
+
+[D:/Invatamant/VIA University College/Semestrul 3/DNP1/DNPAssignment-Git/DNPAssignment/BlazorWasm/Pages/LoginButtons.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5CdXR0b25zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-lhd5b4yoyf
+
+[D:/Invatamant/VIA University College/Semestrul 3/DNP1/DNPAssignment-Git/DNPAssignment/BlazorWasm/Pages/PostView.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdFZpZXcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-vaov3x8ya1
+
+[D:/Invatamant/VIA University College/Semestrul 3/DNP1/DNPAssignment-Git/DNPAssignment/BlazorWasm/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-2ar46ifnr2
+
+[D:/Invatamant/VIA University College/Semestrul 3/DNP1/DNPAssignment-Git/DNPAssignment/BlazorWasm/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-oede2f5y32

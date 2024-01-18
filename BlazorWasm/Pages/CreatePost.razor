@@ -1,0 +1,85 @@
+﻿@page "/CreatePost"
+@using Domain.Models
+@using BlazorWasm.Services
+@using Domain.DTOs
+@using System.Security.Claims
+@inject IUserService userService
+@inject IPostService postService
+@inject NavigationManager navMgr
+
+
+@if (isLoggedIn)
+{
+    <div class="card">
+        <h3>Create Post</h3>
+        <div class="form-group field">
+            <label>Title:</label>
+            <input type="text" @bind="postTitle"/>
+            <label>Description:</label>
+            <input type="text" @bind="description"/>
+        </div>
+            
+        <div class="button-row">
+            @if (!string.IsNullOrEmpty(msg))
+            {
+                <label style="color: red">@msg</label>
+            }
+            <button @onclick="Create" class="acceptbtn">Create</button>
+        </div>
+    </div>
+}
+else
+{
+    <p>You are not logged in.</p>
+}
+
+
+@code {
+   //private IEnumerable<User>? users; delite this line ather <-
+    private string postTitle = "";
+    private string description = "";
+
+    private string msg = "";
+    
+    [CascadingParameter]
+    public Task<AuthenticationState> AuthState { get; set; } = null!;
+    private string userName; //this one is not neccesar 
+    private bool isLoggedIn;
+    
+    private async Task Create()
+    {
+        msg = "";
+        if (string.IsNullOrEmpty(postTitle))
+        {
+            msg = "Title cannot be empty!";
+            return;
+        }
+        
+        try
+        {
+            PostCreationDto dto = new(userName, postTitle, description);
+            await postService.CreateAsync(dto);
+            navMgr.NavigateTo("/");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            msg = e.Message;
+        }
+    }
+    
+    //What is bellow is for Login 
+    
+
+    protected override async Task OnInitializedAsync()
+    {
+        AuthenticationState authState = await AuthState;
+        ClaimsPrincipal user = authState.User;
+        isLoggedIn = user.Identity != null;
+        
+        if (!isLoggedIn) return;
+        
+        userName = user.Identity!.Name!;
+        msg = "";
+    }
+}

@@ -1,0 +1,96 @@
+{
+  "Users": [
+    {
+      "Id": 1,
+      "UserName": "ionV",
+      "Password": "1234"
+    },
+    {
+      "Id": 2,
+      "UserName": "emanuel",
+      "Password": "1234"
+    },
+    {
+      "Id": 3,
+      "UserName": "michaelL",
+      "Password": "1111"
+    },
+    {
+      "Id": 4,
+      "UserName": "emanuelD",
+      "Password": "11111"
+    }
+  ],
+  "Posts": [
+    {
+      "Id": 1,
+      "Owner": {
+        "Id": 1,
+        "UserName": "ionV",
+        "Password": null
+      },
+      "Title": "Post 1",
+      "Description": "asdasda"
+    },
+    {
+      "Id": 2,
+      "Owner": {
+        "Id": 1,
+        "UserName": "ionV",
+        "Password": "1234"
+      },
+      "Title": "newPost",
+      "Description": "some d"
+    },
+    {
+      "Id": 3,
+      "Owner": {
+        "Id": 1,
+        "UserName": "ionV",
+        "Password": "1234"
+      },
+      "Title": "Post Ion Demo",
+      "Description": "some desc"
+    },
+    {
+      "Id": 4,
+      "Owner": {
+        "Id": 1,
+        "UserName": "ionV",
+        "Password": "1234"
+      },
+      "Title": "asdasd",
+      "Description": "jkljlk"
+    },
+    {
+      "Id": 5,
+      "Owner": {
+        "Id": 1,
+        "UserName": "ionV",
+        "Password": "1234"
+      },
+      "Title": "Post nr 5",
+      "Description": "Description for post nr 5"
+    },
+    {
+      "Id": 6,
+      "Owner": {
+        "Id": 1,
+        "UserName": "ionV",
+        "Password": "1234"
+      },
+      "Title": "Post 6",
+      "Description": "some description"
+    },
+    {
+      "Id": 7,
+      "Owner": {
+        "Id": 4,
+        "UserName": "emanuelD",
+        "Password": "11111"
+      },
+      "Title": "Emanuel Post",
+      "Description": "Some description ...emanuel"
+    }
+  ]
+}

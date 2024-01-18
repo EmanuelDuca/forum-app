@@ -1,0 +1,67 @@
+﻿@page "/"
+@using Domain.Models
+@using BlazorWasm.Services
+@inject IPostService postService
+@inject NavigationManager navMgr
+
+<PageTitle>Index</PageTitle>
+
+<h1>List of Posts</h1>
+
+@if (!string.IsNullOrEmpty(msg))
+{
+    <div>
+        <span>@msg</span>
+    </div>
+}
+
+@if (posts == null)
+{
+    <span>Loading..</span>
+}
+else if (!posts.Any())
+{
+    <span>No users to be found</span>
+}
+else
+{
+    <div class="post-container">
+        @foreach (Post post in posts)
+        {
+            <div class="post-card" @onclick="() => OpenPost(post.Id)">
+                <label>@post.Title</label>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    private IEnumerable<Post>? posts;
+    private string msg = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        msg = "";
+        try
+        {
+            posts = await postService.GetAsync(null, null, null, null);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            msg = e.Message;
+        }
+    }
+
+    private void OpenPost(int id)
+    {
+        try
+        {
+            navMgr.NavigateTo($"/PostView/{id}");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
+    }
+}
